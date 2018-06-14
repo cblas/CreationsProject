@@ -26,6 +26,12 @@ namespace creations.client.angularjs
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+
+
+            bundles.Add(new ScriptBundle("~/bundles/angularjs").Include(
+                      "~/Scripts/angular.min.js",
+                      "~/Scripts/App/creations-module.js"));
         }
     }
 }

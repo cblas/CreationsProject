@@ -49,11 +49,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Answer.cs">
+      <DependentUpon>Model_DB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="Course.cs">
+      <DependentUpon>Model_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EvaluationCompleted.cs">
+      <DependentUpon>Model_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Evaluations.cs">
+      <DependentUpon>Model_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Expedient.cs">
+      <DependentUpon>Model_DB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model_DB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model_DB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model_DB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_DB.tt</DependentUpon>
     </Compile>
     <Compile Include="Model_DB.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -61,6 +81,18 @@
       <DependentUpon>Model_DB.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Question.cs">
+      <DependentUpon>Model_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuestionAnswers.cs">
+      <DependentUpon>Model_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Student.cs">
+      <DependentUpon>Model_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Model_DB.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="Model_DB.edmx">
@@ -79,6 +111,12 @@
     <Content Include="Model_DB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model_DB.Context.cs</LastGenOutput>
+      <DependentUpon>Model_DB.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model_DB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model_DB.edmx</DependentUpon>
+      <LastGenOutput>Model_DB.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
